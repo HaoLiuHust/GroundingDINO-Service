@@ -1,0 +1,19 @@
+# pip install -r requirements.txt
+
+# base ----------------------------------------
+opencv-python
+numpy
+Pillow
+scipy
+scikit-learn
+#for Chinese Users
+#-e git+https://gitee.com/haoliuhust/grounding-dino.git@dev#egg=groundingdino
+#for other users
+-e git+https://github.com/IDEA-Research/GroundingDINO.git#egg=groundingdino
+EasyDict
+PyYAML
+torchserve 
+torch-model-archiver 
+torch-workflow-archiver
+-i https://pypi.org/simple/
+nvgpu>=0.10.0

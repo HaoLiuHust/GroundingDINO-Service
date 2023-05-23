@@ -26,6 +26,10 @@ suppose these files are in the bert-base-uncased folder.
 ```bash
 docker build -t torchserve:groundingdino .
 ```
+or you can use the image I have built:
+```bash
+docker pull haoliuhust/torchserve:groundingdino
+```
 ### 4. convert model to torchserve format
 ```bash
 docker run --rm -it -v $(pwd):/data -w /data torchserve:groundingdino bash -c "torch-model-archiver --model-name groundingdino --version 1.0 --serialized-file weights/groundingdino_swint_ogc.pth --handler grounding_dino_handler.py --extra-files GroundingDINO_SwinT_OGC.py,bert-base-uncased/*"
